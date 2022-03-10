@@ -149,9 +149,10 @@ def find_return_to_tonic_ranges(piece):
             ranges.append(max_note-min_note)
     return ranges
 
-def get_melodic_contour(piece):
-    values = piece['notes'][:, 3].astype(np.int64)
-    values = values[values!=-1]
+def get_notes(piece, remove_rests=False):
+    values = piece['notes'][:, 3].astype(int)
+    if remove_rests:
+        values = values[values!=-1]
     return np.array(values)
 
 def sort_dict_by_key(dct):
