@@ -3,14 +3,16 @@ import numpy as np
 import xml.etree.ElementTree as ET
 
 PITCH_CLASS = {
-            'C':0,
-            'D':9,
-            'E':18,
-            'F':22,
-            'G':31,
-            'A':40,
-            'B':44
+        'C':0,
+        'D':9,
+        'E':18,
+        'F':22,
+        'G':31,
+        'A':40,
+        'B':44
 }
+
+PERDE_LOCS=list(PITCH_CLASS.values())
 
 ACCIDENTALS = {
         'quarter-flat':-1,
@@ -22,6 +24,27 @@ ACCIDENTALS = {
         'sharp':+4,
         'slash-quarter-sharp':+5,  
         'slash-sharp':+8
+}
+
+# a tonic reference https://www.researchgate.net/figure/Twenty-four-makams-that-appear-in-this-paper-are-represented-in-the-AEU-system-Special_fig2_276132262
+# for those not in the paper, cross-referenced from recordings and other sources e.g. http://muzik.name/
+TONICS = {
+        'Uşşak': PITCH_CLASS['G'],
+        'Nihâvent': PITCH_CLASS['G'],
+        'Kürdîlihicazkâr': PITCH_CLASS['D'],
+        'Sabâ': PITCH_CLASS['D'],
+        'Rast': PITCH_CLASS['C'],
+        'Mâhur': PITCH_CLASS['G'],
+        'Segâh': PITCH_CLASS['A'] + ACCIDENTALS['sharp'],
+        'Hicaz': PITCH_CLASS['G'],
+        'Hüseynî': PITCH_CLASS['G'],
+        'Bûselik': PITCH_CLASS['G'] + ACCIDENTALS['sharp'],
+        'Muhayyer': PITCH_CLASS['G'],
+        'Hüzzam': PITCH_CLASS['A'],
+        'Hicazkâr': PITCH_CLASS['F'] + ACCIDENTALS['sharp'],
+        'Beyâtî': PITCH_CLASS['G'],
+        'Karcığar': PITCH_CLASS['A'],
+        'Acemaşîrân': PITCH_CLASS['F']
 }
 
 def read_score(score_path):
