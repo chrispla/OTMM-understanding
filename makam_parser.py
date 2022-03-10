@@ -157,3 +157,7 @@ def get_notes(piece, remove_rests=False):
 
 def sort_dict_by_key(dct):
     return {k:dct[k] for k in sorted(dct.keys())}
+
+def max_occur_and_key(counter):
+    key=max(counter, key=counter.get)
+    return key,counter[key]    
