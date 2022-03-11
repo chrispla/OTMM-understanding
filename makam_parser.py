@@ -2,7 +2,7 @@ import numpy as np
 
 import xml.etree.ElementTree as ET
 
-from makam_knowledge import *
+from makam_information import *
 
 def read_score(score_path):
     tree=ET.parse(score_path)
