@@ -2,6 +2,8 @@ import numpy as np
 
 import xml.etree.ElementTree as ET
 
+# Koma values of pitch classes
+# a whole tone is 9, semitone is 4 koma
 PITCH_CLASS = {
         'C':0,
         'D':9,
@@ -14,6 +16,7 @@ PITCH_CLASS = {
 
 PERDE_LOCS=list(PITCH_CLASS.values())
 
+# Koma differences of accidentals
 ACCIDENTALS = {
         'quarter-flat':-1,
         'slash-flat':-4,
