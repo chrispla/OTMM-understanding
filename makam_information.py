@@ -1,30 +1,30 @@
 # Koma values of pitch classes a whole tone is 9, semitone is 4 koma
 # Taken from Şentürk 2016
 PITCH_CLASS = {
-        'C':0,
-        'D':9,
-        'E':18,
-        'F':22,
-        'G':31,
-        'A':40,
-        'B':44
+        'C': 0,
+        'D': 9,
+        'E': 18,
+        'F': 22,
+        'G': 31,
+        'A': 40,
+        'B': 44
 }
 
 # Koma differences of accidentals
 # Taken from Şentürk 2016
 ACCIDENTALS = {
-        'quarter-flat':-1,
-        'slash-flat':-4,
-        'flat':-5,
-        'double-slash-flat':-8,
+        'quarter-flat': -1,
+        'slash-flat': -4,
+        'flat': -5,
+        'double-slash-flat': -8,
         'natural': 0,
-        'quarter-sharp':+1,
-        'sharp':+4,
-        'slash-quarter-sharp':+5,  
-        'slash-sharp':+8
+        'quarter-sharp': +1,
+        'sharp': +4,
+        'slash-quarter-sharp': +5,
+        'slash-sharp': +8
 }
 
-# a tonic reference https://www.researchgate.net/figure/Twenty-four-makams-that-appear-in-this-paper-are-represented-in-the-AEU-system-Special_fig2_276132262
+# tonic reference https://www.researchgate.net/figure/Twenty-four-makams-that-appear-in-this-paper-are-represented-in-the-AEU-system-Special_fig2_276132262
 # for those not in the paper, cross-referenced from recordings and other sources e.g. http://muzik.name/
 TONICS = {
         'Uşşak': PITCH_CLASS['G'],
@@ -46,20 +46,20 @@ TONICS = {
 }
 
 # Taken from https://islamansiklopedisi.org.tr/
-DOMINANTS ={
+DOMINANTS = {
         'Uşşak': ['Neva'],
         'Nihâvent': ['Neva'],
         'Kürdîlihicazkâr': ['Gerdaniye'],
         'Sabâ': ['Çargah'],
         'Rast': ['Neva'],
-        'Mâhur': ['Gerdaniye'], # Tiz Durak
+        'Mâhur': ['Gerdaniye'],  # Tiz Durak
         'Segâh': ['Neva'],
         'Hicaz': ['Neva'],
         'Hüseynî': ['Hüseyni'],
         'Bûselik': ['Hüseyni', 'Çargah'],
-        'Muhayyer': ['Muhayyer', 'Hüseyni'], # Tiz Durak
+        'Muhayyer': ['Muhayyer', 'Hüseyni'],  # Tiz Durak
         'Hüzzam': ['Neva'],
-        'Hicazkâr': ['Gerdaniye'], # Tiz Durak
+        'Hicazkâr': ['Gerdaniye'],  # Tiz Durak
         'Beyâtî': ['Neva'],
         'Karcığar': ['Neva'],
         'Acemaşîrân': ['Acem', 'Çargah', 'Dügah']
@@ -115,8 +115,8 @@ AEU_PERDE = {
             'Tiz Segah': 101,
             'Tiz Buselik': 102,
             'Tiz Dik Buselik': 105,
-            'Tiz Çargah': 106   
+            'Tiz Çargah': 106
 }
 
 # Koma values in an octave
-AEU_OCTAVE_KOMA=[i for i in list(AEU_PERDE.values()) if i<53]
+AEU_OCTAVE_KOMA = [i for i in list(AEU_PERDE.values()) if i < 53]
