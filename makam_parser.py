@@ -1,8 +1,8 @@
-import numpy as np
-
 import xml.etree.ElementTree as ET
 
-from makam_information import PITCH_CLASS, ACCIDENTALS
+import numpy as np
+
+from makam_information import ACCIDENTALS, PITCH_CLASS
 
 
 def read_score(score_path):
